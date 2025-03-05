@@ -1,73 +1,104 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+* {
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
     color: #333;
+    line-height: 1.6;
 }
 
 .container {
-    width: 80%;
-    max-width: 600px;
-    margin: 30px auto;
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
 }
 
-header {
+.profile-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    overflow: hidden;
+}
+
+.avatar {
+    flex: 1;
+    padding: 20px;
     text-align: center;
-    margin-bottom: 30px;
 }
 
 .avatar img {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #007bff;
+    border: 3px solid #007bff;
+}
+
+.info {
+    flex: 2;
+    padding: 30px;
 }
 
 h1 {
     color: #007bff;
-    margin: 10px 0 5px;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.job {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.personal-info,
+.about,
+.contact {
+    margin-top: 20px;
 }
 
 h2 {
-    color: #6c757d;
-    font-weight: normal;
-}
-
-h3 {
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 10px;
     color: #007bff;
-}
-
-.personal-info ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.personal-info li {
+    font-size: 20px;
     margin-bottom: 10px;
+    border-bottom: 2px solid #007bff;
+    display: inline-block;
 }
 
-.contact-links {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+p {
+    margin: 10px 0;
 }
 
-.contact-links a,
-.contact-links span {
-    text-decoration: none;
+.contact ul {
+    list-style: none;
+}
+
+.contact li {
+    margin: 10px 0;
+}
+
+.contact a {
     color: #007bff;
-    transition: color 0.3s ease;
+    text-decoration: none;
 }
 
-.contact-links a:hover {
-    color: #0056b3;
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .avatar {
+        padding: 20px 0;
+    }
 }
